@@ -7,15 +7,15 @@
 """
 
 def swap(x, y):
-    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))): #Checks if x is a not a number - either integer or float, returning a -1 as failure signal 
         return -1
     else:
-        x, y = y, x
+        x, y = y, x #python evaluates the right side then assigns them to the left
         print(f"x = {x}, y = {y}")
 
 # Task 2
 # Invoke the function "swap" using the following scenarios:
 # - "Apple", 10
 # - 9, 17
-swap("Apple", 10)
-swap(9, 17)
+swap("Apple", 10) #will not print because Apple is neither an integer or a float
+swap(9, 17) #will print x = 17 and y = 9
