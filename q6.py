@@ -6,16 +6,16 @@
 """
 
 def find_first_negative(lst):
-    i = 0
-    while i < len(lst):
-        if lst[i] < 0:
-            return lst[i]
-        i += 1
-    return "No negatives"
+    i = 0 #variable to track current position in the list starting at index "0"
+    while i < len(lst): #keeps looping as long as "i" hasn't gone past the previous index.
+        if lst[i] < 0: #checks if current index is negative
+            return lst[i] 
+        i += 1 #Moves to next item to prevent infinite loops
+    return "No negatives" #reached if the loop finishes without finding a negative number
 
 # Task 2
 # Invoke the function "find_first_negative" using the following scenario:
 # - [3, 5, -1, 7, -2, 8]
 # - [2, 10, 7, 0]
-print(find_first_negative([3, 5, -1, 7, -2, 8]))
-print(find_first_negative([2, 10, 7, 0]))
+print(find_first_negative([3, 5, -1, 7, -2, 8])) #-1
+print(find_first_negative([2, 10, 7, 0])) #will return "no negatives"
